@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>~</title>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<script src="scripts/transitions.js"></script>
+	</head>
+
+	<body>
+		<svg id="fader"></svg>
+        <script>fadeInPage();</script>
+
+		<!-- Welcome screen -->
+		<div id="main_window">
+			<img id=leftImg src="assets/img/image.gif" class="image">
+			<div id="content">
+				<h1 class="title">お帰りなさい</h1>
+				<div id="date">
+					<script type="text/javascript">
+						function doDate() {
+							var str = "";
+							var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+							var clock = new Date();
+							var now = new Date();
+
+							str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) +":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+							document.getElementById("date").innerHTML = str;
+						}
+						setInterval(doDate, 1000);
+						doDate();
+					</script>
+				</div>
+
+		<!-- Web search -->
+				<div id="web_search">
+					<form action="https://duckduckgo.com/" method="GET" autocomplete="off">
+						<label for="q">></label>
+						<input autofocus
+			        	 		id="q"
+			         			name="q"
+			         			type="search"
+			         			placeholder="Enter the wired...">
+					</form>
+				</div>
+
+		<!-- Links -->
+				<nav>
+					<div id="links_container">
+						<ul>
+							<a class="subtitle">Post</a>
+								<li><a href="https://protonmail.com/">Protonmail</a></li>
+								<li><a href="https://mail.google.com/mail/?tab=wm/">Gmail</a></li>
+								<li><a href="https://outlook.live.com/owa/">Outlook</a></li>
+						<li><a href="https://www.onedrive.live.com/">OneDrive</a></li></ul>
+						<ul>
+							<a class="subtitle">Media</a>
+								<li><a href="https://www.youtube.com/">YouTube</a></li>
+								<li><a href="https://www.reddit.com/">Reddit</a></li>
+								<li><a href="https://itch.io/">itch.io</a></li>
+						<li><a href="https://9anime.to/home">9Anime</a></li></ul>
+						<ul>
+							<a class="subtitle">Tools</a>
+								<li><a href="https://github.com/">GitHub</a></li>
+								<li><a href="https://stackoverflow.com/">StackOverflow</a></li>
+								<li><a href="https://tineye.com">TinEye</a></li>
+						<li><a href="https://mega.io/">Mega</a></li></ul>
+						<ul>
+							<a class="subtitle">Chan</a>
+								<li><a href="https://boards.4channel.org/w/">/w/</a></li>
+								<li><a href="https://endchan.net/404/">/404/</a></li>
+								<li><a href="https://boards.4channel.org/wsr/">/wsr/</a></li>
+						<li><a href="https://8chan.moe/t/">/t/</a></li></ul>
+						<ul>
+							<a class="subtitle">Other</a>
+								<li><a href="https://www.lyrical-nonsense.com/">Lyrical</a></li>
+								<li><a href="https://archive.org/">Archive.org</a></li>
+								<li><a href="https://thepiratebay.org/index.html">ThePirateBay</a></li>
+						<li><a href="https://haveibeenpwned.com/">HaveiBeenPwned</a></li></ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="bottom">
+			<p class="credits">
+				<a href="https://sukeban.moe/">Art from VA-11 HALL-A: Cyberpunk Bartender Action</a>
+			</p>
+
+			<div class="contacts">
+				<p>
+					<a href="https://gitlab.com/wolfiy/wlfys-minimal-startpage">GitLab Repo</a> | 
+					<span id="light-mode-toggle" class="light-mode-toggle">Switch themes</span>
+				</p>
+			</div>
+		</div>
+
+		<script src="scripts/darkmode.js"></script>
+	</body>
+</html>
